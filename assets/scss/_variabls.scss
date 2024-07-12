@@ -1,0 +1,138 @@
+//=======================
+// Developer Variable
+//=======================
+
+// Responsive Variables
+$extraBig-device: "only screen and (min-width: 1600px)";
+$laptop-device: "only screen and (min-width: 1200px) and (max-width: 1599px)";
+$desktop-device: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$tablet-device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$large-mobile: "only screen and (max-width: 767px)";
+$small-mobile: "only screen and (max-width: 575px)";
+$extra-small-mobile: "only screen and (max-width: 479px)";
+
+//===============================
+// Bootstrap Variables Overright
+//===============================
+
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+$primary: #07332f;
+$secondary: #1f3f37;
+$success: #f7a582;
+$dark: #07332f;
+$seashell: #fff5f1;
+$white: #ffffff;
+$gray-900: #212529;
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"success": $success,
+	"dark": $dark,
+	"seashell": $seashell,
+	"whited": $white,
+);
+// scss-docs-end theme-colors-map
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-negative-margins: true;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.3125,
+	2: $spacer * 0.625,
+	3: $spacer * 0.9375,
+	4: $spacer * 1.25,
+	5: $spacer * 1.625,
+	6: $spacer * 1.875,
+	7: $spacer * 2.1875,
+	8: $spacer * 2.5,
+	9: $spacer * 2.8125,
+	10: $spacer * 3.125,
+);
+$body-color: #AAAAAA;
+
+// Grid breakpoint,
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1600px,
+);
+// scss-docs-end grid-breakpoints
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px,
+	xxl: 1200px,
+);
+// scss-docs-end container-max-widths
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 30px;
+//
+$gutters: $spacers;
+
+// Transition
+$transition-base: all 0.3s ease 0s;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-enable value-keyword-case
+$font-family-base: 'Roboto', sans-serif;
+$title-font-family: 'Newsreader', serif; 
+
+// $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
+// $font-size-base effects the font size of the body text
+$font-size-base: 1rem;
+//
+//
+$line-height-base: 1.5;
+//
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+//
+$headings-font-family: 'Shippori Mincho', serif;
+$headings-font-weight: 500;
+$headings-line-height: 1.2;
+$headings-color: null;
+
+
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-smooth-scroll: false;

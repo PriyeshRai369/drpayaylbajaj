@@ -1,0 +1,113 @@
+/*=======================================
+    03.07 Submit-form CSS
+=========================================*/
+.submit-form-wrapper {
+    margin-top: 100px;
+    padding: 100px;
+    @media #{$tablet-device} {
+        margin-top: 80px;
+        padding: 80px 40px;
+    }
+    @media #{$large-mobile} {
+        padding: 60px 20px;
+        margin-top: 60px;
+    }
+
+    & .content {
+        margin-bottom: 70px;
+        @media #{$large-mobile} {
+            margin-bottom: 60px;
+        }
+        & .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: $primary;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1;
+            margin-top: -5px;
+            @media #{$tablet-device} {
+                font-size: 36px;
+            }
+            @media #{$large-mobile} {
+                font-size: 30px;
+            }
+        }
+        & p {
+            font-size: 25px;
+            font-weight: 700;
+            color: $success;
+            text-align: center;
+            font-family: $headings-font-family;
+            @media #{$tablet-device} {
+                font-size: 22px;
+            }
+            @media #{$large-mobile} {
+                font-size: 18px;
+            }
+        }
+    }
+}
+.contact-form {
+    & .default-form-group {
+        position: relative;
+
+        &.date-calender {
+            & button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 15px;
+                border: none;
+                color: #07332f;
+            }
+        }
+
+        & input, & .form-select, & textarea {
+            height: 55px;
+            background-color: $white;
+            padding: 0 30px 0 20px;
+            width: 100%;
+            border: 0px;
+            border-radius: 0;
+            box-shadow: none;
+            color: #797979;
+            font-size: 15px;
+
+            &::placeholder {
+                color: #797979;
+                opacity: 1;
+            }
+
+            &:focus {
+                border: 0;
+                box-shadow: none;
+                background-color: $success;
+                color: $white;
+
+                &::placeholder {
+                    color: $white;
+                    opacity: 1;
+                }
+
+                &::-ms-input-placeholder {
+                    color: $white;
+                    opacity: 1;
+                }
+                
+                &::-ms-input-placeholder {
+                    color: $white;
+                    opacity: 1;
+                }
+            }
+        }
+
+        & textarea {
+            padding: 15px 20px;
+        }
+    }
+}
+.form-messege {
+    text-align: center;
+    margin-top: 10px;
+}

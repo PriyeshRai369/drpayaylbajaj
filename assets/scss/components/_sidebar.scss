@@ -1,0 +1,210 @@
+/*=======================================
+    03.09 Sidebar CSS
+=========================================*/
+.sidebar_widget {
+    max-width: 300px;
+    width: 100%;
+    @media #{$desktop-device} {    
+        max-width: 250px;
+    }
+    @media #{$tablet-device} {    
+        padding-top: 80px;
+        max-width: 100%;
+    }
+    @media #{$large-mobile} {    
+        padding-top: 60px;
+        max-width: 100%;
+    }
+    & .search-box {
+        position: relative;
+
+        & .search-form {
+            border: 0;
+            height: 60px;
+            width: 100%;
+            border-radius: 0;
+            background: $seashell;
+            padding: 0 70px 0 30px;
+            transition: $transition-base;
+
+            &:focus {
+                background: $success;
+                color: $white;
+                transition: $transition-base;
+
+                &::placeholder {
+                    color: $white;
+                    opacity: 1;
+                    transition: $transition-base;
+                }
+            }
+        }
+
+        & .search-icon {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 0;
+            background: $primary;
+            color: $white;
+            height: 60px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                color: $success;
+            }
+        }
+    }
+
+    & .widget-list {
+        & .widget-title {
+            font-size: 35px;
+            font-weight: 700;
+            color: $primary;
+            margin-bottom: 40px;
+            @media #{$large-mobile} {    
+                font-size: 30px;
+            }
+        }
+
+        & .sidebar-body {
+            & .sidebar-list {
+                margin-bottom: -20px;
+                & li {
+                    position: relative;
+                    height: 60px;
+                    background: $seashell;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 10px 0 30px;
+                    margin-bottom: 20px;
+                    justify-content: space-between;
+                    transition: $transition-base;
+
+                    & a {
+                        color: #797979;
+                        transition: $transition-base;
+                    }
+
+                    & .cat-icon {
+                        border: 0;
+                        height: 45px;
+                        width: 45px;
+                        background: #ffe4d8;
+                        color: $primary;
+                        transition: $transition-base;
+                    }
+
+                    &:hover {
+                        background: $primary;
+                        transition: $transition-base;
+                        & a {
+                            color: $white;
+                            transition: $transition-base;
+                        }
+
+                        & .cat-icon {
+                            background: $success;
+                            color: $white;
+                            transition: $transition-base;
+                        }
+                    }
+                }
+            }
+
+            & .single-sidebar-post {
+                border: 1px solid #ebebeb;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                transition: $transition-base;
+
+                & .sidebar-post-thumb {
+                    max-width: 80px;
+                    width: 100%;
+                }
+                & .sidebar-post-content {
+                    margin-left: 20px;
+                    & span {
+                        color: #797979;
+                        font-size: 14px;
+                        line-height: 2;
+                        transition: $transition-base;
+                    }
+
+                    & .title {
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: $primary;
+                        transition: $transition-base;
+                        line-height: 1.43;
+                    }
+                }
+                &:hover {
+                    background: $primary;
+                    border: 1px solid $primary;
+                    transition: $transition-base;
+
+                    & .sidebar-post-content {
+                        & span {
+                            color: $white;
+                            transition: $transition-base;
+                        }
+                        & .title {
+                            color: $success;
+                            transition: $transition-base;
+                        }
+                    }
+                }
+            }
+
+            & .widget-tags {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: -10px;
+
+                & li {
+                    margin: 0 10px 10px 0;
+                    & a {
+                        height: 45px;
+                        line-height: 45px;
+                        padding: 0 26px;
+                        font-size: 15px;
+                        border: 1px solid #ebebeb;
+                        display: block;
+                        color: #797979;
+                        transition: all 0.3s ease 0s;
+
+                        &:hover {
+                            color: $white;
+                            border: 1px solid $success;
+                            background-color: $success;
+                            transition: all 0.3s ease 0s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.sidebar-opposite-wrapper {
+    max-width: 800px;
+    width: 100%;
+    @media #{$desktop-device} {    
+        max-width: 650px;
+    }
+    @media #{$tablet-device, $large-mobile} {    
+        max-width: 100%;
+    }
+}
+.content-sidebar-area {
+    display: flex;
+    justify-content: space-between;
+    @media #{$tablet-device, $large-mobile} {    
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,119 @@
+/*=======================================
+    4.03 404-Error CSS
+=========================================*/
+.page-not-found-area {
+    padding: 220px 0;
+    @media #{$tablet-device} {
+        padding: 80px 0;
+    }
+    @media #{$large-mobile} {
+        padding: 60px 0;
+    }
+
+    & .page-not-found-wrapper {
+        text-align: center;
+        position: relative;
+        margin: 0 100px;
+        @media #{$large-mobile, 
+            $tablet-device} {
+            margin: 0;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            border: 2px solid #fe8403;
+            opacity: .12;
+            height: 430px;
+            width: 900px;
+            border-radius: 100%;
+            transform: rotate(-20deg);
+            z-index: -1;
+            right: 0;
+            left: auto;
+            @media #{$large-mobile, 
+                $tablet-device, 
+                $desktop-device} {
+                width: 620px;
+                height: 350px;
+                right: 20px;
+            }
+            @media #{$large-mobile} {
+                display: none;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            border: 2px solid #fe8403;
+            opacity: .12;
+            height: 400px;
+            width: 900px;
+            border-radius: 100%;
+            transform: rotate(-20deg);
+            z-index: -1;
+            left: 0;
+            right: auto;
+            bottom: 0;
+            @media #{$large-mobile, 
+                $tablet-device, 
+                $desktop-device} {
+                width: 620px;
+                height: 350px;
+                left: 20px;
+            }
+            @media #{$large-mobile} {
+                display: none;
+            }
+        }
+
+        & .content {
+            margin-bottom: 80px;
+            @media #{$large-mobile} {
+                margin-bottom: 60px;
+            }
+            & .title {
+                font-size: 60px;
+                font-weight: 800;
+                color: $primary;
+                @media #{$large-mobile} {
+                    font-size: 50px;
+                }
+                @media #{$extra-small-mobile} {
+                    font-size: 40px;
+                }
+            }
+            & p {
+                font-size: 32px;
+                color: $success;
+                font-family: $headings-font-family;
+                font-weight: 600;
+                @media #{$large-mobile} {
+                    font-size: 26px;
+                }
+                @media #{$extra-small-mobile} {
+                    font-size: 20px;
+                }
+            }
+        }
+        & .image {
+            margin-bottom: 80px;
+            @media #{$large-mobile} {
+                margin-bottom: 60px;
+            }
+        }
+        & .back-button {
+            & .btn {
+                background-color: $white;
+                &:hover {
+                    background-color: $dark;
+                }
+                & i {
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

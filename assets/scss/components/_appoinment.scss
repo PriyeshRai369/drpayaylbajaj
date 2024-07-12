@@ -1,0 +1,146 @@
+/*=======================================
+    03.17 Appoinment CSS
+=========================================*/
+.appoinment-section {
+    padding: 115px 100px 100px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    
+    @media #{$desktop-device} {
+        padding: 115px 50px 100px;
+    }
+    
+    @media #{$tablet-device} {
+        padding: 80px 100px;
+    }
+
+    @media #{$large-mobile} {
+        padding: 60px 30px;
+    }
+
+    @media #{$extra-small-mobile} {
+        padding: 60px 15px;
+    }
+
+    & .appoinment-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        & .appoinment-content {
+            width: 430px;
+            @media #{$tablet-device, $large-mobile} {
+                width: 100%;
+                text-align: center;
+            }
+
+            & .title {
+                font-size: 50px;
+                font-weight: 800;
+                color: $white;
+                line-height: 1;
+                @media #{$tablet-device, $large-mobile} {
+                    font-size: 40px;
+                }
+                @media #{$extra-small-mobile} {
+                    font-size: 26px;
+                    line-height: 1.4;
+                }
+            }
+        }
+        & .appoinment-info-wrapper {
+            width: calc(100% - 430px);
+            display: flex;
+            @media #{$tablet-device, $large-mobile} {
+                width: 100%;
+                justify-content: center;
+                margin-top: 50px;
+            }
+            
+        
+            @media #{$extra-small-mobile} {
+                margin-top: 40px;
+            }
+
+            & .contact-info {
+                margin-left: 104px;
+                text-align: center;
+                width: 160px;                
+                
+                @media #{$desktop-device} {
+                    margin-left: 32px;
+                }
+
+                @media #{$tablet-device, $large-mobile} {
+                    width: 220px;
+                    margin-left: 0;
+                }
+        
+                @media #{$extra-small-mobile} {
+                    width: 130px;
+                }
+
+                & .icon-box {
+                    margin-bottom: 40px;
+                    & i {
+                        font-size: 18px;
+                    }
+        
+                    @media #{$extra-small-mobile} {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                & .info {
+                    & .title {
+                        font-size: 16px;
+                        font-family: $font-family-base;
+                        font-weight: 500;
+                        color: $dark;
+                        line-height: 1;
+                        margin-bottom: 20px;
+        
+                        @media #{$extra-small-mobile} {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    & .number {
+                        font-size: 20px;
+                        font-family: $font-family-base;
+                        font-weight: 500;
+                        color: $white;
+                        line-height: 1;
+                        margin-bottom: 0;
+
+                        &:hover {
+                            color: $dark;
+                        }
+        
+                        @media #{$extra-small-mobile} {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .contact-info {
+        & .icon-box {
+            & .round-shape {
+                &::after {
+                    color: $primary;
+                }
+                &.round-shape-negative {
+
+                    &::after {
+                        transform: rotate(15deg) translateX(0);
+                        left: -45px;
+                        top: -13px;
+                    }
+                }
+            }
+        }
+    }
+}

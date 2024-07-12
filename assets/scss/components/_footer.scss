@@ -1,0 +1,235 @@
+/*=======================================
+    03.19 Footer CSS
+=========================================*/
+.single-footer-widget {
+
+    &.single-footer-space-left {
+        padding-left: 20px;
+        
+        @media #{$tablet-device, $small-mobile} {
+            padding-left: 0;
+        }
+    }
+
+    & .widget-title {
+        font-size: 20px;
+        color: $white;
+        margin-bottom: 45px;
+        font-weight: 500;
+        font-family: $font-family-base;
+        
+        @media #{$tablet-device} {
+            margin-bottom: 35px;
+        }
+        
+        @media #{$large-mobile} {
+            margin-bottom: 30px;
+        }
+    }
+
+    & .desc-content {
+        color: #c4c4c4;
+        width: 280px;
+        font-size: 15px;
+        line-height: 2;
+        @media #{$desktop-device, $large-mobile} {
+            width: 100%;
+        }
+    }
+
+    & .contact-links {
+        margin-bottom: 0px;
+        & li {
+            color: #c4c4c4;
+            font-weight: 400;
+
+            & a {
+                color: #c4c4c4;
+                font-weight: 400;
+
+                &:hover {
+                    color: $body-color;
+                }
+            }
+
+            & i {
+                font-size: 18px;
+                color: #c4c4c4;
+                font-weight: 400;
+            }
+        }
+    }
+
+    & .widget-list {
+        & li {
+            margin-bottom: 20px;
+            & a {
+                color: #c4c4c4;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                &:hover {
+                    color: $success;
+
+                    & i {
+                        font-size: 8px;
+                        padding-right: 5px;
+                        transition: $transition-base;
+                    }
+
+                }
+
+                & i {
+                    font-size: 0px;
+                    padding-right: 0px;
+                    transition: $transition-base;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & .table-list {
+        & li {
+            color: #c4c4c4;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+
+            & span {
+                max-width: 120px;
+                width: 100%;
+            }
+
+            & .table-list-middle {
+                width: 80px;
+            }
+        }
+    }
+
+}
+.footer-top {
+    position: relative;
+    overflow: hidden;
+
+    & .layer-shape {
+        animation: movebounce 2s infinite alternate;
+        position: absolute;
+        @media #{$tablet-device, $large-mobile} {
+            display: none;
+        }
+        &.footer-shape-left {
+            top: 0;
+            &::after, &::before {
+                content: "";
+                position: absolute;
+                border: 2px solid $success;
+                width: 190px;
+                height: 90px;
+                border-radius: 50%;
+                transform: rotate(-20deg);
+                left: -80px;
+                top: 100px;
+                @media #{$laptop-device, $desktop-device} {
+                    top: 40px;
+                    left: -100px;
+                }
+            }
+            &::before {
+                top: 150px;
+                left: -100px;
+                @media #{$laptop-device, $desktop-device} {
+                    top: 70px;
+                }
+            }
+        }
+        &.footer-shape-right {
+            bottom: 0;
+            right: 0;
+            &::after, &::before {
+                content: "";
+                position: absolute;
+                border: 2px solid $success;
+                width: 190px;
+                height: 90px;
+                border-radius: 50%;
+                transform: rotate(-20deg);
+                right: -80px;
+                bottom: 100px;
+                @media #{$laptop-device, $desktop-device} {
+                    bottom: 40px;
+                    right: -100px;
+                }
+            }
+            &::before {
+                bottom: 150px;
+                right: -100px;
+                @media #{$laptop-device, $desktop-device} {
+                    bottom: 70px;
+                }
+            }
+        }
+    }
+}
+.footer-bottom {
+    border-top: 1px solid #1a433f;
+}
+.copyright-content {
+    display: flex;
+    justify-content: flex-start;
+    
+    @media #{$large-mobile} {
+        justify-content: center;
+        text-align: center;
+    }
+    & p {
+        color: $white;
+        font-size: 15px;
+
+        & a {
+            &:hover {
+                color: $body-color;
+            }
+        }
+    }
+}
+.footer-menu {
+    & ul {
+        display: flex;
+        justify-content: flex-end;
+    
+        @media #{$large-mobile} {
+            justify-content: center;
+        }
+        & li {
+            position: relative;
+            margin-right: 10px;
+            padding-right: 20px;
+
+            &::after {
+                content: "/";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $white;
+            }
+            & a {
+                color: $white;
+                &:hover {
+                    color: $success;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+                padding-right: 0;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

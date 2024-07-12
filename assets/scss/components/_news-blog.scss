@@ -1,0 +1,191 @@
+/*=======================================
+    03.16 News-blog CSS
+=========================================*/
+.news-blog-area {
+    display: flex;
+    flex-wrap: wrap;
+    @media #{$large-mobile}{
+        margin: 0 -15px;
+    }
+
+    & .news-blog-wrapper {
+        width: 42.8%;
+
+        @media #{$desktop-device}{
+            height: 480px;
+        }
+
+        @media #{$tablet-device, $large-mobile}{
+            width: 500px;
+            margin: 0 auto 40px;
+        }
+        @media #{$large-mobile}{
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+    }
+
+    & .blog-wrapper {
+        width: 57.2%;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media #{$tablet-device, $large-mobile}{
+            width: 100%;
+        }
+            
+        @media #{$extra-small-mobile}{
+            margin-bottom: -30px;
+        }
+
+        & .single-blog {
+            margin-left: 50px;
+            width: 42.529%;
+            
+            @media #{$desktop-device}{
+                margin-left: 30px;
+                width: 44.3%;
+            }
+            @media #{$tablet-device, $large-mobile}{
+                padding: 0 15px;
+                margin: 0;
+                width: 50%;
+            }
+            
+            @media #{$extra-small-mobile}{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+.news-blog-wrapper {
+    position: relative;
+    & .news-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        &::before{
+            position: absolute;
+            content: "";
+            width: 425px;
+            height: 425px;
+            border-radius: 100%;
+            background-color: $primary;
+            opacity: .66;
+            z-index: -1;
+
+            @media #{$desktop-device}{
+                width: 380px;
+                height: 380px;
+            }
+            @media #{$extra-small-mobile}{
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        & .subtitle {
+            color: $white;
+            font-size: 14px;
+            line-height: 1;
+            font-family: $font-family-base;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            @media #{$extra-small-mobile}{
+                margin-bottom: 15px;
+            }
+        }
+
+        & .title {
+            color: $white;
+            font-size: 50px;
+            line-height: 1.2;
+            font-weight: 800;
+            width: 400px;
+            margin-bottom: 40px;
+            @media #{$extra-small-mobile}{
+                width: 220px;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+.single-blog {
+    &:hover {
+        & .blog-thumb {
+            & img {
+                transition: .4s;
+                transform: scale(1.2) rotate(2deg);
+            }
+        }
+    }
+    & .blog-thumb {
+        margin-bottom: 40px;
+        display: block;
+        overflow: hidden;
+        @media #{$extra-small-mobile}{
+            margin-bottom: 30px;
+        }
+        & img {
+            transition: .4s;
+            transform: scale(1.0);
+        }
+    }
+    & .blog-content {
+        & .subtitle {
+            background-color: #ffe5da;
+            color: $success;
+            font-size: 15px;
+            padding: 5px 18px;
+            font-family: $font-family-base;
+            font-weight: 400;
+            display: inline-block;
+        }
+
+        & .title {
+            font-size: 28px;
+            line-height: 1.42;
+            color: $dark;
+            font-weight: 700;
+            margin-top: 12px;
+            margin-bottom: 25px;
+            
+            @media #{$desktop-device}{
+                font-size: 24px;
+            }
+            @media #{$small-mobile}{
+                font-size: 22px;
+            }
+            @media #{$extra-small-mobile}{
+                margin-bottom: 20px;
+            }
+            & a {
+                color: $dark;
+                &:hover {
+                    color: $success;
+                }
+            }
+        }
+        & p {
+            color: #797979;
+            line-height: 1.8;
+        }
+
+        & .meta {
+            & span {
+                color: $success;
+            }
+        }
+    }
+}

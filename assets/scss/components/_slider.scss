@@ -1,0 +1,302 @@
+/*=======================================
+    03.03 Slider CSS
+=========================================*/
+.slider-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+    & .slingle-slider {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 128px;
+        overflow: hidden;
+        @media #{$large-mobile} {
+            padding-top: 108px;
+        }
+
+        & .slider-left {
+            width: 48%;
+            align-self: center;
+            @media #{$tablet-device} {
+                width: 47%;
+            }
+            @media #{$large-mobile} {
+                width: 100%;
+                padding: 80px 0;
+            }
+            @media #{$extra-small-mobile} {
+                width: 100%;
+                padding: 40px 0 50px;
+            }
+        }
+        & .slider-right {
+            width: 52%;
+            z-index: 99;
+            @media #{$tablet-device} {
+                width: 53%;
+            }
+            @media #{$large-mobile} {
+                width: 100%;
+            }
+
+            & .slider-images {
+                @media #{$large-mobile} {
+                    width: 340px;
+                    margin: 0 auto;
+                }
+                @media #{$extra-small-mobile} {
+                    width: 260px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        & .slider-content {
+            width: 545px;
+            height: 420px;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-left: auto;
+            position: relative;
+            z-index: 2;
+            @media #{$desktop-device} {
+                width: 440px;
+            }
+            @media #{$tablet-device} {
+                width: 340px;
+                height: 340px;
+            }
+            @media #{$large-mobile} {
+                width: 340px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            @media #{$extra-small-mobile} {
+                width: 260px;
+                height: 300px;
+                margin: 0 auto;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 530px;
+                width: 360px;
+                background-color: $success;
+                opacity: .1;
+                border-radius: 180px;
+                left: -155px;
+                z-index: -1;
+                @media #{$tablet-device} {
+                    left: -240px;
+                }
+                @media #{$large-mobile} {
+                    height: 430px;
+                    width: 260px;
+                    left: -90px;
+                }
+                @media #{$small-mobile} {
+                    left: -50px;
+                }
+                @media #{$extra-small-mobile} {
+                    left: -30px;
+                    width: 220px;
+                    height: 380px;
+                }
+            }
+
+            & .title {
+                font-size: 80px;
+                line-height: 100px;
+                font-family: $headings-font-family;
+                color: $white;
+                text-transform: inherit;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+                margin-top: -20px;
+                @media #{$desktop-device} {
+                    font-size: 70px;
+                    line-height: 92px;
+                }
+                @media #{$tablet-device, $large-mobile} {
+                    font-size: 50px;
+                    line-height: 66px;
+                }
+                @media #{$extra-small-mobile} {
+                    font-size: 40px;
+                    line-height: 60px;
+                    margin-bottom: 10px;
+                }
+
+                & .first-line {
+                    font-weight: 400;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 22px;
+                        right: -10px;
+                        border: 2px solid $success;
+                        height: 90px;
+                        width: 200px;
+                        border-radius: 50%;
+                        transform: rotate(-18deg);
+                        z-index: -1;
+                        @media #{$desktop-device} {
+                            height: 80px;
+                            width: 180px;
+                        }
+                        @media #{$tablet-device, $large-mobile} {
+                            height: 60px;
+                            width: 130px;
+                            right: -5px;
+                            top: 15px;
+                        }
+                        @media #{$extra-small-mobile} {
+                                height: 45px;
+                                width: 104px;
+                                right: 0px;
+                                top: 15px;
+                        }
+
+                    }
+                }
+
+                & .second-line {
+                    font-weight: 700;
+                }
+            }
+
+            & p {
+                font-size: 18px;
+                line-height: 38px;
+                color: $white;
+                max-width: 508px;
+
+                @media #{$tablet-device, $large-mobile} {
+                    font-size: 16px;
+                    line-height: 32px;
+                    max-width: 308px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 14px;
+                    max-width: 330px;
+                }
+                @media #{$extra-small-mobile} {
+                    line-height: 28px;
+                }
+            }
+
+            & .btn {
+                font-size: 15px;
+                padding: 24px 55px;
+
+                & i {
+                    margin-left: 10px;
+                }
+                @media #{$small-mobile} {
+                    padding: 18px 25px;
+                }
+            }
+        }
+    }
+
+    & .counter-pagination {
+        position: absolute;
+        bottom: 80px;
+        right: 80px;
+        display: flex;
+        z-index: 999;
+        
+        @media #{$laptop-device, $desktop-device} {
+            bottom: 50px;
+            right: 50px;
+        }
+        @media #{$tablet-device} {
+            bottom: 40px;
+            right: 40px;
+        }
+        @media #{$large-mobile} {
+            bottom: 30px;
+            right: 30px;
+        }
+        @media #{$extra-small-mobile} {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        & span {
+            font-size: 82px;
+            line-height: 82px;
+            font-family: $headings-font-family;
+            color: $success;
+
+            &.current-slide {
+                color: $white;
+            }
+            @media #{$laptop-device, $desktop-device} {
+                font-size: 60px;
+                line-height: 60px;
+            }
+            @media #{$tablet-device, $large-mobile} {
+                font-size: 50px;
+                line-height: 50px;
+            }
+            @media #{$large-mobile} {
+                font-size: 40px;
+                line-height: 40px;
+            }
+            @media #{$extra-small-mobile} {
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+// Animation Style 
+.animation-style-01{
+
+    & .slider-content{
+        opacity: 0;
+    }
+
+    & .swiper-slide-active{
+        & .slider-content{
+            opacity: 1;
+
+            & .title{
+                animation-name: fadeInUpBig;
+                animation-delay: 0.4s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+            & p{
+                animation-name: fadeInUpBig;
+                animation-delay: 0.8s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+            & .btn{
+                animation-name: fadeInUpBig;
+                animation-delay: 1.2s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+        }
+
+        & .slider-images{
+            opacity: 1;
+
+            & img{
+                animation-name: fadeInUpBig;
+                animation-delay: 1.2s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+        }
+    }
+}

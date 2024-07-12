@@ -1,0 +1,151 @@
+/*=======================================
+    03.05 Layer CSS
+=========================================*/
+.layer {
+    height: 530px;
+    width: 360px;
+    background-color: $success;
+    opacity: .1;
+    border-radius: 180px;
+
+    &.shape-1 {
+        position: absolute;
+        right: -180px;
+        top: -115px;
+        border-radius: 0 0 0 180px;
+        @media #{$tablet-device} {
+            right: -210px;
+            top: -250px;
+        }
+    }
+
+    // &.shape-2{
+    //     position: absolute;
+    //     left: 11%;
+    //     top: 320px;
+    // }
+
+    &.shape-3 {
+        position: absolute;
+        right: -180px;
+        bottom: -115px;
+    }
+
+    &.shape-4{
+        position: absolute;
+        left: 214px;
+        top: 135px;
+    }
+}
+.layer-2{
+    height: 530px;
+    width: 360px;
+    background-color: $success;
+    opacity: .1;
+    border-radius: 180px;
+    
+    @media #{$laptop-device, 
+        $desktop-device, 
+        $tablet-device, 
+        $large-mobile} {
+        display: none;
+    }
+    &.shape-3 {
+        position: absolute;
+        right: -195px;
+        top: 542px;
+    }
+}
+.layer-3 {
+    height: 530px;
+    width: 360px;
+    background-color: $success;
+    opacity: .5;
+    border-radius: 180px;
+    position: absolute;
+    top: -175px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media #{$desktop-device} {
+        top: -270px;
+    }
+    @media #{$tablet-device, $large-mobile} {
+        top: -300px;
+    }
+    @media #{$large-mobile} {
+        top: -350px;
+        width: 260px;
+    }    
+    @media #{$small-mobile} {
+        top: -400px;
+        width: 160px;
+    }
+}
+.layer-4 {
+    height: 460px;
+    width: 230px;
+    background-color: $primary;
+    border-radius: 180px;
+    z-index: -1;
+    &.shape-5 {
+        position: absolute;
+        left: -70px;
+        top: -200px;
+        
+        @media #{$tablet-device} {
+            left: -90px;
+            top: -260px;
+        }
+        @media #{$large-mobile} {
+            top: -250px;
+            left: -140px;
+        }
+        @media #{$extra-small-mobile} {
+            display: none;
+        }
+    }
+
+    &.shape-6{
+        position: absolute;
+        right: 210px;
+        top: -350px;
+        background-color: $seashell;
+        opacity: .1;
+    
+        @media #{$desktop-device} {
+            right: 130px;
+        }
+        
+        @media #{$tablet-device, $large-mobile} {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -240px;
+        }
+        @media #{$large-mobile} {
+            top: -250px;
+        }
+        
+        @media #{$extra-small-mobile} {
+            width: 170px;
+            top: -290px;
+        }
+    }
+
+    &.shape-7{
+        position: absolute;
+        right: -140px;
+        top: 140px;
+        
+        @media #{$tablet-device} {
+            top: 220px;
+        }
+        @media #{$large-mobile} {
+            top: 220px;
+            right: -170px;
+        }
+        @media #{$extra-small-mobile} {
+            display: none;
+        }
+    }
+}

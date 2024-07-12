@@ -1,0 +1,321 @@
+/*=======================================
+    4.04 Blog Details CSS
+=========================================*/
+.blog-details-content {
+    & .title {
+        font-size: 44px;
+        line-height: 1.33;
+        font-weight: 700;
+        margin-bottom: 30px;
+        margin-top: -10px;
+        @media #{$desktop-device} {
+            font-size: 40px;
+        }
+        @media #{$large-mobile} {
+            font-size: 36px;
+        }
+        @media #{$small-mobile} {
+            font-size: 30px;
+        }
+    }
+    & .details-meta {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+        justify-content: space-between;
+        padding: 10px 0;
+        margin-bottom: 35px;
+        @media #{$extra-small-mobile} {
+            flex-direction: column;
+        }
+        & .meta-title {
+            font-size: 14px;
+            color: $success;
+            font-family: $font-family-base;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+            line-height: .8;
+            @media #{$extra-small-mobile} {
+                padding: 5px 0;
+            }
+        }
+        & span {
+            font-weight: 500;
+            margin-right: 5px;
+            margin-left: 5px;
+            &.meta-date {
+                color: $success;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    & p {
+        color: #797979;
+        line-height: 1.93;
+    }
+    & img {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .blockquote-area {
+        background-color: $seashell;
+        margin: 40px 0;
+        padding: 30px;
+
+        & .blockquote {
+            border: 0;
+            margin: 0;
+            position: relative;
+            text-align: center;
+            z-index: 1;
+            opacity: 1;
+
+            & p {
+                color: $primary;
+                font-family: $headings-font-family;
+                font-size: 24px;
+                line-height: 1.58;
+                font-weight: 700;
+                @media #{$small-mobile} {
+                    font-size: 20px;
+                }
+            }
+            & .icon {
+                color: $primary;
+                opacity: .2;
+                font-size: 240px;
+                font-weight: 700;
+                left: 50%;
+                line-height: 1;
+                position: absolute;
+                top: 15px;
+                z-index: -1;
+                transform: translate(-50%, 0);
+                font-family: 'Newsreader', serif;
+            }
+        }
+    }
+}
+.blog-details-tags-share {
+    background-color: $seashell;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    @media #{$small-mobile} {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    & .blog-details-tags, & .blog-details-share {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        & .lable {
+            font-size: 16px;
+            font-weight: 500;
+            color: $primary;
+            margin-right: 10px;
+        }
+    }
+
+    & .blog-details-share {
+        @media #{$small-mobile} {
+            margin-top: 10px;
+        } 
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            & li {
+                margin-right: 10px;
+                & a {
+                    color: $success;
+                    font-size: 18px;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    & .blog-details-tags {   
+        & ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        & li {
+            margin-right: 5px;
+            & a {
+                color: #fff;
+                background: $success;
+                padding: 3px 10px;
+                font-size: 14px;
+                &:hover {
+                    color: $white;
+                    background: $primary;
+                }
+                @media #{$small-mobile} {
+                    padding: 3px 5px;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    }
+}
+.comment-area {
+
+    & .title {
+        margin-bottom: 50px;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    & .comment-content {
+        margin-bottom: -40px;
+        padding: 100px 0;
+        @media #{$tablet-device} {
+            padding: 80px 0;
+        }
+        @media #{$large-mobile} {
+            padding: 60px 0;
+        }
+
+        & .single-comment {
+            padding: 30px;
+            background-color: $seashell;
+            margin-bottom: 40px;
+            display: flex;
+            position: relative;
+            transition: $transition-base;
+            @media #{$small-mobile} {
+                flex-direction: column;
+            }
+
+            & .author-details {
+                padding-left: 40px;
+                flex: 1;
+                @media #{$small-mobile} {
+                    padding-left: 0;
+                    padding-top: 20px;
+                }
+
+                & .author-name-subtitle {
+                    display: flex;
+                    align-items: baseline;
+                    margin-bottom: 10px;
+                    @media #{$large-mobile} {
+                        flex-direction: column;
+                    }
+
+                    & .name {
+                        font-size: 24px;
+                        color: $success;
+                        font-weight: 600;
+                        font-family: $title-font-family;
+                        margin-right: 10px;
+                    }
+
+                    & .subtitle {
+                        color: #797979;
+                        font-size: 14px;
+                    }
+                }
+
+                & p {
+                    color: #797979;
+                    line-height: 1.93;
+                    margin-bottom: 0;
+                }
+
+                & .btn-replay {
+                    position: absolute;
+                    top: 40px;
+                    right: 40px;
+                    color: $success;
+                    @media #{$small-mobile} {
+                        top: 140px;
+                    }
+                    @media #{$extra-small-mobile} {
+                        position: relative;
+                        top: auto;
+                        bottom: 0;
+                        right: auto;
+                        left: 0;
+                        padding-top: 20px;
+                        display: block;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: $primary;
+                transition: $transition-base;
+                & .author-details {
+    
+                    & .author-name-subtitle {
+    
+                        & .name {
+                            color: $white;
+                        }
+    
+                        & .subtitle {
+                            color: $success;
+                        }
+                    }
+    
+                    & p {
+                        color: #c4c4c4;
+                    }
+
+                }
+            }
+
+            &.single-subcontent {
+                margin-left: 130px;
+                @media #{$large-mobile} {
+                    margin-left: 80px;
+                }
+                @media #{$extra-small-mobile} {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+
+    & .comment-form {
+        & .contact-form {
+            & .default-form-group{
+                & input,  & textarea{
+                    background-color: $seashell;
+                    height: 60px;
+
+                    &:focus {
+                        border: 0;
+                        box-shadow: none;
+                        background-color: $success;
+                        color: $white;
+                    }
+                }
+                & textarea{
+                    height: inherit;
+                }
+            } 
+        } 
+    }
+}

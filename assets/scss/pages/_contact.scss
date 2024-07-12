@@ -1,0 +1,193 @@
+/*=======================================
+    4.02 Contact CSS
+=========================================*/
+
+/* Contact Map */
+.contact-map {
+    height: 700px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    @media #{$tablet-device} {
+        height: 500px;
+    }
+    @media #{$large-mobile} {
+        height: 400px;
+    }
+    @media #{$extra-small-mobile} {
+        height: 300px;
+    }
+}
+
+.single-contact-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff5f1;
+    padding: 35px 30px;
+    transition: $transition-base;
+    @media #{$desktop-device} {
+        padding: 35px;
+    }
+    @media #{$large-mobile} {
+        padding: 30px;
+    }
+    @media #{$extra-small-mobile} {
+        flex-direction: column;
+    }
+
+    & .single-info-thumb {
+        height: 80px;
+        width: 80px;
+        border-radius: 100%;
+        background-color: $white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $white;
+        transition: $transition-base;
+        position: relative;
+
+        & .rotate-around {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: $transition-base;
+
+            & span {
+                position: relative;
+                display: block;
+                height: 100%;
+                animation: rotation 10s infinite linear;
+                &::before, &::after {
+                    position: absolute;
+                    height: 8px;
+                    width: 8px;
+                    content: "";
+                    border-radius: 50%;
+                    background: $success;
+                }
+                &::before {
+                    left: 3px;
+                    bottom: 10px;
+                }
+                &::after {
+                    right: 3px;
+                    top: 10px;
+                }
+            }
+        }
+    }
+
+    & .single-contact-title {
+        margin-top: 20px;
+        & .title {
+            font-size: 20px;
+            line-height: 2;
+            font-weight: 800;
+            color: $dark;
+            margin-bottom: 0;
+            transition: $transition-base;
+            @media #{$extra-small-mobile} {
+                font-size: 18px;
+                margin-left: 0px;
+                margin-top: 10px;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: $primary;
+        transition: $transition-base;
+
+        & .single-info-thumb {
+            background-color: $primary;
+            border-color: $success;
+            transition: $transition-base;
+
+            & .rotate-around {
+                opacity: 1;
+                transition: $transition-base;
+            }
+        }
+
+        & .single-contact-title {
+            & .title {
+                color: $white;
+                transition: $transition-base;
+            }
+        }
+    }
+}
+
+.contact-wrapper {
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    @media #{$tablet-device} {
+        margin-top: 80px;
+    }
+    @media #{$large-mobile} {
+        margin-top: 60px;
+    }
+    & .content {
+        & .title {
+            font-size: 55px;
+            line-height: 1;
+            @media #{$tablet-device} {
+                font-size: 45px;
+            }
+            @media #{$large-mobile} {
+                font-size: 35px;
+            }
+        }
+    }
+
+    & .contact-form {
+        & .default-form-group {
+            position: relative;
+    
+            & textarea {
+                height: 280px;
+                @media #{$large-mobile} {
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    & .submit-form-wrapper{
+        position: relative;
+        z-index: 3;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $success;
+            width: 350px;
+            height: 350px;
+            border-radius: 100%;
+            z-index: -1;
+            @media #{$tablet-device} {
+                bottom: -170px;
+            }
+            @media #{$large-mobile} {
+                bottom: -185px;
+            }
+            @media #{$small-mobile} {
+                bottom: -100px;
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+/*----------------------------------------*/
+/*  04. Pages CSS
+/*----------------------------------------*/
+
+/*=======================================
+    4.01 FAQ CSS
+=========================================*/
+.faq-accordion {
+    & .accordion-item {
+        border-color: $success;
+        border: 0px;
+    }
+    & .accordion-button {
+        border-radius: 0px;
+        font-family: $title-font-family;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 25px 30px;
+        border: 1px solid $seashell;
+        @media #{$tablet-device} {
+            padding: 20px 25px;
+        }
+        @media #{$large-mobile} {
+            padding: 20px;
+            font-size: 20px;
+        }
+        @media #{$large-mobile} {
+            padding: 15px;
+            font-size: 18px;
+        }
+        &::after {
+            display: none;
+        }
+        &:focus {
+            border: 0px;
+            box-shadow: none;
+        }
+        &:not(.collapsed) {
+            color: $primary;
+            background: $seashell;
+            box-shadow: none;
+            border: 1px solid $seashell;
+        }
+        &.collapsed {
+            border: 1px solid #ebebeb;
+            border-radius: 0;
+        }
+    }
+    & .accordion-body {
+        background-color: $seashell;
+        padding: 0px 30px 30px;
+
+        & p {
+            color: #797979;
+            font-size: 15px;
+            line-height: 1.93;
+        }
+    }
+}

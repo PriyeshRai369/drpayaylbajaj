@@ -1,0 +1,87 @@
+/*=======================================
+    03.14 Banner CSS
+=========================================*/
+.video-banner {
+    position: relative;
+    overflow: hidden;
+
+    & .video-btn {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            top: 70px;
+        }
+        @media #{$small-mobile} {
+            top: 50px;
+        }
+
+        & .btn-play {
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+
+            background: $white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background: $primary;
+            }
+
+            @media #{$large-mobile} {
+                height: 80px;
+                width: 80px;
+            }
+            @media #{$small-mobile} {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+
+    & .video-title {
+        position: absolute;
+        bottom: 60px;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+
+        font-size: 45px;
+        line-height: 1.5;
+
+        color: $white;
+        font-weight: 800;
+
+        & .text-style {
+            color: $success;
+        }
+
+        @media #{$desktop-device} {
+            font-size: 40px;
+            bottom: 40px;
+        }
+        @media #{$tablet-device} {
+            font-size: 30px;
+            bottom: 20px;
+        }
+        @media #{$large-mobile} {
+            font-size: 20px;
+            bottom: 15px;
+        }            
+        @media #{$small-mobile} {
+            font-size: 18px;
+            bottom: 10px;
+        }
+        @media #{$extra-small-mobile} {
+            font-size: 13px;
+            bottom: 0px;
+            margin-top: 10px;
+            color: $primary;
+            position: static;
+        }
+    }
+}

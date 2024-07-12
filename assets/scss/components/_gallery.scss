@@ -1,0 +1,177 @@
+/*=======================================
+    03.18 Gallery CSS
+=========================================*/
+.gallery-section {
+    & .gallery-filter-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px 15px 20px;
+        margin-bottom: 100px;
+        @media #{$tablet-device} {
+            margin-bottom: 80px;
+        }
+        @media #{$large-mobile} {
+            margin-bottom: 60px;
+        }
+
+        & .filter-button {
+            position: relative;
+            border: 0;
+            font-size: 16px;
+            line-height: 1;
+            padding: 0 0 0 40px;
+            margin: 0 0 20px 30px;
+            @media #{$desktop-device, $tablet-device, $large-mobile} {
+                padding: 0 0 0 30px;
+                margin: 0 0 20px 20px;
+            }
+            @media #{$extra-small-mobile} {
+                padding: 0 0 0 20px;
+                margin: 0 0 20px 10px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "//";
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $primary;
+            }
+            &:first-child {
+                margin-left: 0;
+                padding-left: 0;
+                &::after {
+                    display: none;
+                }
+            }
+            &:hover {
+                color: $success;
+                transition: $transition-base;
+            }
+        }
+    }
+}
+.gallery-filter-wrapper {
+    margin-right: -15;
+    margin-left: -15px;
+
+    & .single-gallery {
+        & .gallery-thumb {
+            position: relative;
+            display: block;
+
+            & .bg-overlay {
+                position: absolute;
+                content: "";
+                background: $primary;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                top: 50%;
+                left: 50%;
+                right: 50%;
+                bottom: 50%;
+                transition: .4s;
+            }
+
+            & span {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $success;
+                color: $white;
+                font-size: 15px;
+                line-height: 2;
+                padding: 0px 18px;
+                display: inline-block;
+            }
+
+            & a {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background-color: $success;
+                    width: 70px;
+                    height: 1px;
+                    left: 50%;
+                    top: 50%;
+                    transform: rotate(45deg);
+                    transition: .6s;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 9;
+                    margin-left: -34px;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background-color: $success;
+                    width: 1px;
+                    height: 70px;
+                    left: 50%;
+                    top: 50%;
+                    transform: rotate(45deg);
+                    transition: .6s;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 9;
+                    margin-top: -34px;
+                }
+            }
+
+            &:hover {
+                & .bg-overlay {
+                    width: 100%;
+                    height: 100%;
+                    opacity: .8;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    transition: .4s;
+                }
+                & a {
+                    &::after {
+                        transition: .6s;
+                        transform: rotate(0deg);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    &::before {
+                        transition: .6s;
+                        transform: rotate(0deg);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        & .content {
+            & .title {
+                margin-top: 30px;
+                margin-bottom: 0;
+                text-align: center;
+                font-size: 28px;
+                font-weight: 700;
+                @media #{$desktop-device, $tablet-device, $large-mobile} {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    @media #{$tablet-device} {
+        margin-top: 80px;
+    }
+    @media #{$large-mobile} {
+        margin-top: 60px;
+    }
+}
