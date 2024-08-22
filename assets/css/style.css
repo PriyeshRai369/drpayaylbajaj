@@ -54,12 +54,18 @@ html,
 body {
   height: 100%;
 }
+:root{
+ --primary-color: #950B87;
+ --secondry-color:#7f1071;
+ --success-color:#FFFDAB;
+ --text-color:#ffffff;
+ --color-dark:#000000;
+}
 
 body {
   position: relative;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
-  color: #07332f;
   line-height: 1.6;
   visibility: visible;
 }
@@ -345,7 +351,7 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
   font-size: 45px;
   line-height: 1.2;
   font-weight: 800;
-  color: #83143F;
+  color: var(--primary-color);
   margin-top: -5px;
   margin-bottom: 50px;
 }
@@ -393,7 +399,7 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 }
 
 .section-title .border-wrap .title-border.border-color-1::before {
-  background: #07332f;
+  background: var(--color-dark);
   position: absolute;
   content: "";
   width: 60px;
@@ -407,7 +413,7 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 }
 
 .section-title .border-wrap .title-border.border-color-2::before {
-  background: #000000;
+  background: var(--color-dark);
   position: absolute;
   content: "";
   width: 60px;
@@ -665,14 +671,14 @@ only screen and (max-width: 767px) {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  background-color: #BF044D;
+  background-color: var(--primary-color);
   background-size: 200% auto;
   background-position: left center;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
   overflow: hidden;
-  border: 1px solid #BF044D;
+  border: 1px solid var(--secondry-color);
 }
 
 .scroll-top:hover {
@@ -741,15 +747,15 @@ only screen and (max-width: 767px) {
 /*  02. Helper CSS
 /*----------------------------------------*/
 .bg-name-primary {
-  background-color: #83143F;
+  background-color: var(--primary-color);
 }
 
 .bg-name-secondary {
-  background-color: #BF044D;
+  background-color: var(--secondry-color);
 }
 
 .bg-name-success {
-  background-color: #83143F;
+  background-color: var(--success-color);
 }
 
 .bg-name-dark {
@@ -761,32 +767,9 @@ only screen and (max-width: 767px) {
 }
 
 .bg-name-whited {
-  background-color: #ffffff;
+  background-color: var(--text-color);
 }
 
-.text-color-primary {
-  color: #83143F;
-}
-
-.text-color-secondary {
-  color: #BF044D;
-}
-
-.text-color-success {
-  color: #000000;
-}
-
-.text-color-dark {
-  color: #83143F;
-}
-
-.text-color-seashell {
-  color: #000000;
-}
-
-.text-color-whited {
-  color: #ffffff;
-}
 
 .m-t-5 {
   margin-top: 5px;
@@ -1364,7 +1347,7 @@ only screen and (max-width: 767px) {
 }
 
 .sticky-header.sticky {
-  background: #83143F;
+  background: var(--primary-color);
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1507,7 +1490,7 @@ only screen and (max-width: 767px) {
 
 .main-menu>ul>li>a:hover,
 .main-menu>ul>li>a.active {
-  color: #bfbfbf;
+  color: var(--color-dark);
 }
 
 .main-menu>ul>li>a:hover::after,
@@ -4117,7 +4100,7 @@ only screen and (max-width: 767px) {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff5f1;
+  background-color: var(--text-color);
   padding: 35px 40px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -4125,6 +4108,8 @@ only screen and (max-width: 767px) {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -4153,7 +4138,7 @@ only screen and (max-width: 767px) {
   height: 80px;
   width: 80px;
   border-radius: 100%;
-  background-color: #ffffff;
+  background-color: var(--success-color);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4169,7 +4154,7 @@ only screen and (max-width: 767px) {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border: 2px solid #ffffff;
+  border: 1px solid var(--secondry-color);
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -4250,9 +4235,13 @@ only screen and (max-width: 767px) {
 
 @media only screen and (max-width: 479px) {
   .single-service .single-service-title .title {
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 0px;
     margin-top: 10px;
+  }
+  .single-service .single-service-thumb{
+    width: 65px;
+    height: 65px;
   }
 }
 
@@ -4261,14 +4250,14 @@ only screen and (max-width: 767px) {
 }
 
 .single-service:hover {
-  background-color: #83143F;
+  background-color: var(--primary-color);
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .single-service:hover .single-service-thumb {
-  background-color: #83143F;
+  background-color: var(--secondry-color);
   border-color: #ffffff;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -4582,7 +4571,7 @@ only screen and (max-width: 575px) {
   padding: 70px 70px;
   position: absolute;
   right: 0;
-  background-color: #af235a;
+  background-color: var(--secondry-color);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -4647,7 +4636,7 @@ only screen and (max-width: 767px) {
 }
 
 .about-wrapper .about-right-side .single-about .icon-title .icon {
-  border: 2px solid #ffffff;
+  border: 2px solid var(--success-color);
   border-radius: 100%;
   height: 80px;
   width: 80px;
@@ -4677,7 +4666,7 @@ only screen and (max-width: 767px) {
   font-size: 30px;
   line-height: 2;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--success-color);
 }
 
 @media (max-width:768px) {
@@ -4696,12 +4685,12 @@ only screen and (max-width: 767px) {
 .about-wrapper .about-right-side .single-about p {
   font-size: 15px;
   line-height: 1.9;
-  color: #c6d8d6;
+  color: var(--text-color);
   font-family: "Roboto", sans-serif;
 }
 
 .content-left-side .title {
-  color: #ffffff;
+  color: var(--success-color);
   font-size: 38px;
   line-height: 42px;
   font-weight: 700;
@@ -6530,7 +6519,7 @@ only screen and (max-width: 767px) {
 .footer-top .layer-shape.footer-shape-left::before {
   content: "";
   position: absolute;
-  border: 2px solid #ca2463;
+  border: 2px solid var(--secondry-color);
   width: 190px;
   height: 90px;
   border-radius: 50%;
@@ -6572,7 +6561,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .footer-top .layer-shape.footer-shape-right::before {
   content: "";
   position: absolute;
-  border: 2px solid #ca2463;
+  border: 2px solid var(--secondry-color);
   width: 190px;
   height: 90px;
   border-radius: 50%;
@@ -7713,7 +7702,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .cardContainer {
   width: 400px;
   height: 150px;
-  background-color: #83143F;
+  background-color: var(--primary-color);
   border-radius: 10px;
   padding: 20px;
 }
@@ -7769,7 +7758,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
     span {
       font-size: 2.3rem;
-      color: #ffffff;
+      color: var(--text-color);
       font-family: "Shippori Mincho", serif;
       font-weight: 600;
     }
@@ -7814,12 +7803,12 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #83143F;
+  border: 1px solid var(--secondry-color);
   border-radius: 50%;
   margin: 10px 0 20px 0;
 
   h1 {
-    color: #83143F;
+    color: var(--secondry-color);
   }
 }
 
@@ -7834,12 +7823,13 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
   h3 {
     font-size: 25px;
-    color: #83143F;
+    color: var(--secondry-color);
+    font-weight: 600;
   }
 }
 
 .badge {
-  background-color: #83143F;
+  background-color: var(--primary-color);
   display: inline-block;
   width: 75px;
   height: 30px;
@@ -7849,10 +7839,28 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   margin-left: 15px;
   margin-top: 10px;
 }
+@media (max-width:480px) {
+  .badge{
+    margin: 0;
+    font-weight: 400;
+  }
+  .textSection{
+    font-size: 13px;
+  }
+  .section-title p {
+    font-size: 20px !important;
+  }
+  .hd{
+    font-size: 16px !important;
+  }
+  .higliteTitle h3{
+    font-size: 18px !important;
+  }
+}
 
 .contactSection {
   width: 100%;
-  background-color: #83143F;
+  background-color: var(--secondry-color);
   padding: 100px 0;
   text-align: center;
   color: #ffffff;
@@ -7908,7 +7916,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
       display: inline-block;
       width: 70px;
       height: 70px;
-      border: 2px solid;
+      border: 2px solid var(--secondry-color);
       border-radius: 50%;
       position: relative;
       transition: .5s;
@@ -7920,7 +7928,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 2.5rem !important;
-        color: black;
+        color:var(--secondry-color);
         transition: .5s;
       }
   
@@ -7932,11 +7940,11 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 }
 
 .socialMediaIcons .iconsBox a:hover i{
-  color: #83143F;
+  color: var(--color-dark);
   transform:translate(-50%, -50%) scale(1.2);
 }
 .socialMediaIcons .iconsBox a:hover{
-  border: 2px solid #83143F !important;
+  border: 2px solid var(--color-dark) !important;
 }
 
 .linkContainer ul{
@@ -7957,7 +7965,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #902B51;
+  background-color: var(--secondry-color);
   transition: width .5s;
 }
 
@@ -7966,7 +7974,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 }
 .linkContainer ul li:hover{
   transform: scale(1.2);
-  color: #902B51;
+  color: var(--secondry-color);
 }
 
 .header-actions a{
@@ -7992,10 +8000,10 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 }
 .header-actions a:hover{
-  border:1px solid #000000;
+  border:1px solid var(--color-dark);
 }
 .header-actions a:hover i{
-  color: #000000;
+  color: var(--color-dark);
 }
 
 
@@ -8017,7 +8025,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .mobileViewSocialMedia a{
   font-size: 25px;
   margin: 0 10px;
-  color: #af235a;
+  color: var(--secondry-color);
 }
 .sk-ww-instagram-reels{
   background-color: transparent !important;
