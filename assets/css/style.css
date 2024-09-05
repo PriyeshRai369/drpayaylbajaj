@@ -5614,12 +5614,13 @@ only screen and (max-width: 767px) {
   font-size: 28px;
   line-height: 2.14;
   font-weight: 800;
-  color: #83143F;
+  color: var(--color-dark) ;
 }
 
 @media only screen and (max-width: 767px) {
   .single-testimonial .testimonial-content .title {
     font-size: 22px;
+    color: var(--color-dark) ;
   }
 }
 
