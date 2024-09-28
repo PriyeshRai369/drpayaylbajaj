@@ -4276,6 +4276,8 @@ only screen and (max-width: 767px) {
   transition: all 0.3s ease 0s;
 }
 
+ 
+
 .single-service:hover .single-service-title .title {
   color: #ffffff;
   -webkit-transition: all 0.3s ease 0s;
@@ -7827,13 +7829,27 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   h3 {
     font-size: 25px;
     color: var(--secondry-color);
     font-weight: 600;
   }
+
+  img{
+    width: 60px;
+    margin: 10px ;
+    aspect-ratio: 3/3;
+  }
 }
+.single-service-thumb:hover img {
+  filter: invert(100%) brightness(0) saturate(100%);
+}
+
 
 .badge {
   background-color: var(--primary-color);
@@ -7921,20 +7937,20 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
     a{
       display: inline-block;
-      width: 70px;
-      height: 70px;
+      width: 40px;
+      height: 40px;
       border: 2px solid var(--secondry-color);
       border-radius: 50%;
       position: relative;
       transition: .5s;
-      margin: 0 15px;
+      margin: 0 10px;
   
       i{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 2.5rem !important;
+        font-size: 1.3rem !important;
         color:var(--secondry-color);
         transition: .5s;
       }
@@ -8037,4 +8053,41 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .sk-ww-instagram-reels{
   background-color: transparent !important;
   /* height: 400px !important; */
+}
+
+
+.WidgetBackground__Content-sc-1ho7q3r-2 a[href="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"] {
+  display:none !important;
+}
+
+
+
+.svg-hover path {
+  fill: black; /* Default fill color */
+}
+
+.svg-hover:hover path {
+  fill: white; /* Change to white on hover */
+}
+
+.sg{
+  fill: #000000;
+}
+
+.single-service:hover .single-service-thumb .sg{
+  fill: #ffffff;
+}
+
+.tel{
+  display: block;
+  background:#950b87;
+  padding: 10px 50px;
+  font-size: 25px;
+  color: white;
+  border-radius: 10px;
+
+  &:hover{
+    background: #77086c;
+    color: white;
+  }
 }
