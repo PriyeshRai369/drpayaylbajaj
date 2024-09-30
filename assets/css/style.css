@@ -7841,9 +7841,9 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   }
 
   img{
-    width: 60px;
+    width: 90px;
     margin: 10px ;
-    aspect-ratio: 3/3;
+    /* aspect-ratio: 3/3; */
   }
 }
 .single-service-thumb:hover img {
