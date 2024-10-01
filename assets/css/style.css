@@ -7919,7 +7919,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .footerSection{
   background-color: antiquewhite;
-  padding: 150px 0 ;
+  padding: 50px 0 ;
 }
 
 .socialMediaIcons{
@@ -7931,42 +7931,13 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   flex-direction: column;
   gap: 20px;
 
-
-  .iconsBox{
-
-
-    a{
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      border: 2px solid var(--secondry-color);
-      border-radius: 50%;
-      position: relative;
-      transition: .5s;
-      margin: 0 10px;
-  
-      i{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1.3rem !important;
-        color:var(--secondry-color);
-        transition: .5s;
-      }
-  
-    }
-  }
-
-
-
 }
 
-.socialMediaIcons .iconsBox a:hover i{
+.iconsBox a:hover i{
   color: var(--color-dark);
   transform:translate(-50%, -50%) scale(1.2);
 }
-.socialMediaIcons .iconsBox a:hover{
+.iconsBox a:hover{
   border: 2px solid var(--color-dark) !important;
 }
 
@@ -8034,15 +8005,6 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-actions a{
     display: none;
   }
-
-  .iconsBox a{
-    width: 50px !important;
-    height: 50px !important;
-    margin: 0 10px !important;
-  }
-  .iconBox a i{
-    font-size: 1.5rem !important;
-  }
 }
 
 .mobileViewSocialMedia a{
@@ -8090,4 +8052,43 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     background: #77086c;
     color: white;
   }
+}
+
+.base-foot{
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5px;
+  margin-top: 30px;
+}
+
+.iconsBox{
+  a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--secondry-color);
+    border-radius: 50%;
+    position: relative;
+    transition: .5s;
+    margin: 0 px;
+
+    i{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.8rem !important;
+      color:var(--secondry-color);
+      transition: .5s;
+    }
+
+  }
+}
+
+.otherPage{
+  display: flex;
+  gap: 10px;
 }
