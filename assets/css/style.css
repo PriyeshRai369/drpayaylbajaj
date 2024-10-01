@@ -1343,7 +1343,7 @@ only screen and (max-width: 767px) {
   left: 0;
   width: 100%;
   z-index: 999;
-  /* border-bottom: 1px solid #83143F; */
+  background-color: var(--primary-color);
 }
 
 .sticky-header.sticky {
@@ -8064,6 +8064,13 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   margin-top: 30px;
 }
 
+@media (max-width:660px) {
+  .base-foot{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .iconsBox{
   a{
     display: inline-block;
@@ -8091,4 +8098,8 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .otherPage{
   display: flex;
   gap: 10px;
+}
+
+.privacy-section{
+  margin-top: 120px;
 }
