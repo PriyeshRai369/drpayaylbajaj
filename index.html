@@ -1682,12 +1682,11 @@
               </div>
             </div>
             <div class="col-lg-6 formSection">
+              <div class="response-message"></div>
               <div class="contact-form-box">
                 <form
-                  id="contact-form"
                   class="default-form contact-form"
-                  action="/assets/php/neonal.php"
-                  method="post"
+                  id="contactUsForm"
                 >
                   <div
                     class="default-form-group m-b-20"
@@ -1699,6 +1698,7 @@
                       type="text"
                       placeholder="First Name :"
                       required
+                      id="first_name"
                     />
                   </div>
 
@@ -1712,6 +1712,7 @@
                       type="text"
                       placeholder="Last Name :"
                       required
+                      id="last_name"
                     />
                   </div>
 
@@ -1725,6 +1726,7 @@
                       type="tel"
                       placeholder="Phone :"
                       required
+                      id="phone"
                     />
                   </div>
 
@@ -1738,6 +1740,7 @@
                       type="email"
                       placeholder="Email :"
                       required
+                      id="email"
                     />
                   </div>
                   <div
@@ -1750,6 +1753,7 @@
                       name="message"
                       placeholder="Message :"
                       required
+                      id="message"
                     ></textarea>
                   </div>
                   <div
@@ -1761,8 +1765,8 @@
                       class="default-form-group d-flex justify-content-center"
                     >
                       <button
-                        class="btn btn-outline-whited btn-hover-primary"
-                        type="submit"
+                        class="btn btn-outline-whited btn-hover-primary contact-us-submit"
+                        type="button"
                         id="submit"
                         name="submit"
                       >
@@ -2026,5 +2030,6 @@
 
     <!--Main JS-->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/bajaj.js"></script>
   </body>
 </html>
